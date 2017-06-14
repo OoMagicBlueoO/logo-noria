@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .logo{
+    display: inline-block;
+    width: 529px;
+    height: 311px;
+    background-image: url("./Logo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+  }
+  .logo2{
+    display: inline-block;
+    width: 529px;
+    height: 311px;
+    background-image: url("./logo2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+  }
+  .animate{
+    animation-name: logo;
+    animation-timing-function: steps(24);
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-delay: .3s;
+    animation-direction:alternate;
+    animation-iteration-count:infinite ;
+  }
+  .animate2{
+    animation-name: logo;
+    animation-timing-function: steps(8);
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: .3s;
+    animation-direction:alternate;
+    animation-iteration-count:infinite ;
+  }
+  @keyframes size {
+    from{
+      transform: scale(.5);
+    }
+    to{
+      transform: scale(1);
+    }
+
+  }
+  @keyframes logo {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: bottom;}
+    }
+
+  }
+  </style>
+</head>
+<body>
+  <div class="logo2 animate"></div>
+  <div class="logo animate2"></div>
+</body>
+</html>
